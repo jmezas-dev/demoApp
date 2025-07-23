@@ -14,6 +14,7 @@ WORKDIR /app
 COPY --from=builder /app/target/*jar app.jar
 
 EXPOSE 8080
+#remove this is only used when debugging
 EXPOSE 8000
-
+#remove -agentlib, is only used when debugging
 ENTRYPOINT ["java","-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000", "-jar","app.jar"]
