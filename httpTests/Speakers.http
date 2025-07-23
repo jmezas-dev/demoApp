@@ -1,0 +1,34 @@
+### GET all speakers
+GET http://{{host}}:{{port}}/api/v1/speakers
+
+### GET a single speaker
+GET http://{{host}}:{{port}}/api/v1/speakers/2
+
+### POST a Speaker
+POST http://{{host}}:{{port}}/api/v1/speakers
+Content-Type: application/json
+
+{
+  "first_name": "Arturo",
+  "last_name": "Meza",
+  "title": "Game Developer",
+  "company": "MCllent",
+  "speaker_bio": "Creator of QLebra",
+  "speaker_photo": []
+}
+
+### UPDATE Speaker
+PUT http://{{host}}:{{port}}/api/v1/speakers/2
+Content-Type: application/json
+
+{
+  "first_name": "Arturo",
+  "last_name": "Meza",
+  "title": "Angular Developer",
+  "company": "MCllent",
+  "speaker_bio": "Profesional React Hater",
+  "speaker_photo": []
+}
+
+###DELETE Speaker
+DELETE http://{{host}}:{{port}}/api/v1/speakers/2

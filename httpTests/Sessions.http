@@ -1,0 +1,50 @@
+### GET all sessions
+GET http://{{host}}:{{port}}/api/v1/sessions
+
+### GET a single session.
+GET http://{{host}}:{{port}}/api/v1/sessions/1
+
+### POST a Session
+POST http://{{host}}:{{port}}/api/v1/sessions
+Content-Type: application/json
+
+{
+  "session_name": "WebGL and the future of gaming",
+  "session_description": "We will discuss how WebGL brings new ways to create games",
+  "session_length": 20,
+  "speakers": [
+    {
+      "speaker_id": 2,
+      "first_name": "Arturo",
+      "last_name": "Meza",
+      "title": "Game Developer",
+      "company": "MCllent",
+      "speaker_bio": "Creator of QLebra",
+      "speaker_photo": ""
+    }
+  ]
+}
+
+### UPDATE Session
+PUT http://{{host}}:{{port}}/api/v1/sessions/6
+Content-Type: application/json
+
+{
+  "session_name": "Why do i hate React?",
+  "session_description": "We will discuss how react is the cancer of webdev",
+  "session_length": 20,
+  "speakers": [
+    {
+      "speaker_id": 2,
+      "first_name": "Arturo",
+      "last_name": "Meza",
+      "title": "Angular Developer",
+      "company": "MCllent",
+      "speaker_bio": "Profesional React Hater",
+      "speaker_photo": ""
+    }
+  ]
+}
+
+###DELETE Session.
+DELETE http://{{host}}:{{port}}/api/v1/sessions/1
